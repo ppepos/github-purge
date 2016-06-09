@@ -1,0 +1,25 @@
+{
+  "manifest_version": 2,
+
+  "name": "Github Purgatory",
+  "description": "Removes useless and annoying comments on Github pull-requests and issues.",
+  "version": "0.1",
+
+  "permissions": [
+	"tabs",
+	"http://*/",
+	"https://*/",
+	"webNavigation",
+	"storage"
+  ],
+  "background": {
+	  "scripts": ["background.js"],
+	  "persistent": true
+  },
+  "content_scripts": [
+	  {
+		  "matches": ["https://github.com/nitlang/nit/pull/*", "https://github.com/nitlang/nit/issues/*"],
+		  "js": ["purge.js"]
+	  }
+  ]
+}
