@@ -1,3 +1,13 @@
+/*
+ * ----------------------------------------------------------------------------
+ * "THE BEER-WARE LICENSE" (Revision 42):
+ * <ppeposp@gmail.com> wrote this file.  As long as you retain this notice you
+ * can do whatever you want with this stuff. If we meet some day, and you think
+ * this stuff is worth it, you can buy me a beer in return.
+ *                                                    Philippe Pepos Petitclerc
+ * ----------------------------------------------------------------------------
+ */
+
 chrome.storage.local.get("deletedUsers", function (data) {
 	if (data.deletedUsers == undefined) {
 		chrome.storage.local.set({deletedUsers: []}, function () {});
